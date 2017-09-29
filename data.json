@@ -1,0 +1,32 @@
+[
+    {
+        "appId": 1,
+        "name": "xxxx",
+        "owner": "yyy",
+        "rules": [
+            {
+                "signature": "xx",
+                "text": "sdf"
+            },
+            {
+                "signature": "xx",
+                "text": "sdf"
+            }            
+        ]
+    },
+    {
+        "appId": 2,
+        "name": "xxxx",
+        "owner": "yyy",
+        "rules": [
+            {
+                "signature": "xx",
+                "text": "sdf"
+            },
+            {
+                "signature": "xx",
+                "text": "sdf"
+            }            
+        ]
+    }
+]
