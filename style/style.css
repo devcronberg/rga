@@ -9,3 +9,7 @@ body{
 #tbl tbody tr td.nw{
     white-space: nowrap;
 }
+
+tr.erSigneret{
+    background-color: gray;
+}

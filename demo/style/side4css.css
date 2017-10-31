@@ -1,0 +1,31 @@
+h1
+{
+    color: red;
+}
+
+/* div section p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+} */
+
+h1.minP {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+#minP2{
+    color: gold;
+}
+
+p[data-rgaid='1']{
+
+    color: green;
+}
+
+li:nth-child(odd){
+    color: red;
+}
+
+p::first-line{
+    color: red;
+
+}

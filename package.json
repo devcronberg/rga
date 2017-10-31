@@ -1,0 +1,22 @@
+{
+  "name": "rga",
+  "version": "1.0.0",
+  "description": "demo site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devcronberg/rga.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devcronberg/rga/issues"
+  },
+  "homepage": "https://github.com/devcronberg/rga#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
