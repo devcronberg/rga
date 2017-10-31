@@ -10,7 +10,7 @@
          "BR_ID": "668",
          "BR_TEXT": "Gennemgår alle sagspart/sag kombinationer og returnerer 1 for en sag, hvis der bare er en sasgpart med rolle = \"Arrestant\".",
          "BR_OWNER": "Bo Simonsen",
-         "BR_SIGNATURE": "bo simonsen",
+         "BR_SIGNATURE": "",
          "BR_TAG": "NEO4"
       },
       {

@@ -8,13 +8,13 @@
     <!-- burde kigge på html boilerplate -->
     <title>Business Rules</title>
     <link rel="stylesheet" href="style/style.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> 
 </head>
 
 <body>
     <h1>Business Rules Approval</h1>
 
-    <table id="tbl">
+    <table id="tbl" class="table table-striped">
         <thead>
             <tr>
                 <th>Owner</th>
@@ -23,8 +23,8 @@
                 <th>Godkend</th>
             </tr>
         </thead>
-        <tbody>
-            <tr data-rgaid="122497" title="neo.RGA_vArrestantsager">
+        <tbody id=tb>
+            <!-- <tr data-rgaid="122497" title="neo.RGA_vArrestantsager">
                 <td>Bo Simonsen</td>
                 <td>En match (profilsammenfald = ja) defineres som: \n1: Kun alleller i systemer, som er typet for både referenceprofil
                     og sporprofil, tælles med\n2: Antallet af alleller i sporet = antal alleller i referenceprofilen = antallet
@@ -42,7 +42,7 @@
                 <td>
                     <input type="button" value="Godkend" class="btn btn-primary btn-sm" />
                 </td>
-            </tr>
+            </tr> -->
 
         </tbody>
     </table>
@@ -69,9 +69,9 @@
             </div>
     </div> -->
 
-
-    <script src="script/app.js" />
-    <script src="script/sysdemo1.js" />
+    <script src="script/sysdemo1.js"></script>
+    <script src="script/app.js"></script>
+    
 </body>
 
 </html>
