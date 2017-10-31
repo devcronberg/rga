@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- burde kigge på html boilerplate -->
+    <title>Business Rules</title>
+    <link rel="stylesheet" href="style/style.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <h1>Business Rules Approval</h1>
+
+    <table id="tbl">
+        <thead>
+            <tr>
+                <th>Owner</th>
+                <th>Text</th>
+                <th>Signature</th>
+                <th>Godkend</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-rgaid="122497" title="neo.RGA_vArrestantsager">
+                <td>Bo Simonsen</td>
+                <td>En match (profilsammenfald = ja) defineres som: \n1: Kun alleller i systemer, som er typet for både referenceprofil
+                    og sporprofil, tælles med\n2: Antallet af alleller i sporet = antal alleller i referenceprofilen = antallet
+                    af matchende alleller mellem de to</td>
+                <td class="nw">bo simonsen</td>
+                <td>
+                    <input type="button" value="Godkend" class="btn btn-primary btn-sm" />
+                </td>
+            </tr>
+
+            <tr data-rgaid="122498" title="neo.RGA_vErklaeringsProduktionVIP1og2">
+                <td class="nw">Bo Simonsen</td>
+                <td>Kun sammenligninger markeret som \"Rapporteres\" i sammenligningsgenereringen medtages</td>
+                <td class="nw"></td>
+                <td>
+                    <input type="button" value="Godkend" class="btn btn-primary btn-sm" />
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <!-- <div class="tbl">
+        <div class=row>
+            <div class=cell>Bo Simonsen</div>
+            <div class=cell>En match (profilsammenfald = ja) defineres som: \n1: Kun alleller i systemer, som er typet for både referenceprofil
+                og sporprofil, tælles med\n2: Antallet af alleller i sporet = antal alleller i referenceprofilen = antallet
+                af matchende alleller mellem de to</div>
+            <div class="cell nw">bo simonsen</div>
+            <div>
+                <input type="button" value="Godkend" />
+            </div>
+        </div>
+        <div class=row>
+                <div class=cell>Bo Simonsen</div>
+                <div class=cell>En match (profilsammenfald = ja) defineres som: \n1: Kun alleller i systemer, som er typet for både referenceprofil
+                    og sporprofil, tælles med\n2: Antallet af alleller i sporet = antal alleller i referenceprofilen = antallet
+                    af matchende alleller mellem de to</div>
+                <div class="cell nw">bo simonsen</div>
+                <div>
+                    <input type="button" value="Godkend" />
+                </div>
+            </div>
+    </div> -->
+
+
+    <script src="script/app.js" />
+    <script src="script/sysdemo1.js" />
+</body>
+
+</html>

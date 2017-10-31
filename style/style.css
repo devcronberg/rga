@@ -1,11 +1,11 @@
-h1{
-    color: red;
+body{
+    background-color: lightblue;
 }
 
-.mc{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+#tbl{
+    width: 900px;
 }
 
-#i1{
-    text-shadow: 10px 10px 10px black;
+#tbl tbody tr td.nw{
+    white-space: nowrap;
 }
