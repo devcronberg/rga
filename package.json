@@ -4,7 +4,8 @@
   "description": "demo site",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server ./",
+    "minihtml": "htmlminify sysdemo1.html -o ./dist/sysdemo1.html"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,11 @@
   },
   "homepage": "https://github.com/devcronberg/rga#readme",
   "dependencies": {
+    "angular": "^1.6.6",
     "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {
+    "html-minify": "^0.3.2",
+    "http-server": "^0.10.0"
   }
 }
