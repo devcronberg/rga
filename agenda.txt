@@ -1,0 +1,7 @@
+
+
+1) js
+2) ts
+3) lint
+4) web pack
+5) app prototype færdig (post...., jquery)

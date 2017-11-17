@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server ./",
+    "ts": "ts",
     "minihtml": "htmlminify sysdemo1.html -o ./dist/sysdemo1.html",
     "scss": "node-sass ./demo/style/test.scss ./demo/style/test.css -w",
     "build-prod": "npm run minihtml && npm run scss"
@@ -22,11 +23,13 @@
   "dependencies": {
     "angular": "^1.6.6",
     "animate.css": "^3.5.2",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "es6-shim": "^0.35.3",
+    "moment": "^2.19.2"
   },
   "devDependencies": {
     "html-minify": "^0.3.2",
     "http-server": "^0.10.0",
-    "node-sass": "^4.5.3"
+    "typescript": "^2.6.1"
   }
 }
