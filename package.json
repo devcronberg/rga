@@ -25,9 +25,11 @@
     "animate.css": "^3.5.2",
     "bootstrap": "^3.3.7",
     "es6-shim": "^0.35.3",
+    "jquery": "^3.2.1",
     "moment": "^2.19.2"
   },
   "devDependencies": {
+    "@types/jquery": "^3.2.16",
     "html-minify": "^0.3.2",
     "http-server": "^0.10.0",
     "typescript": "^2.6.1"

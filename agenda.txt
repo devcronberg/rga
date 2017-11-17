@@ -5,3 +5,5 @@
 3) lint
 4) web pack
 5) app prototype færdig (post...., jquery)
+
+https://github.com/devcronberg/ts-webpack-jquery-starter

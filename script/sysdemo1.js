@@ -1,53 +1,93 @@
-(async function () {
+(function () {
 
-    var d = await ((await fetch("http://localhost:8080/data/TestDataJock.json")).json());
+    var data = [];
 
-    for (var index = 0; index < d.LOCAL_BR_INFO.length; index++) {
-        var element = d.LOCAL_BR_INFO[index];
+    $("#lstObjNavn").change(function(){
+        var on = $(this).val();
 
-        // direkte DOM manipulaiton?? Brug jQuery
-        var tr = document.createElement("tr");
-        var a = document.createAttribute("data-rgaid");
-        a.value = d.LOCAL_BR_INFO[index].BR_ID;
-        tr.setAttributeNode(a);
+        var nData = data.LOCAL_BR_INFO.filter(function(v){
+            if(v.ObjectName===on)
+                return true;
+        });
+        newData = {};
+        newData.LOCAL_BR_INFO = nData;
+        createTbl(newData);
+        
+        
+    });
 
-        var td = document.createElement("td");
-        td.classList.add("nw");
-        td.innerHTML = d.LOCAL_BR_INFO[index].BR_OWNER;
-        tr.appendChild(td);
+    $.getJSON("http://localhost:8080/data/TestDataJock.json", {}, function (d) {
 
-        var td = document.createElement("td");
-        td.innerHTML = d.LOCAL_BR_INFO[index].BR_TEXT;
-        tr.appendChild(td);
 
-        var td = document.createElement("td");
-        td.innerHTML = d.LOCAL_BR_INFO[index].BR_SIGNATURE;
-        td.classList.add("nw");
-        tr.appendChild(td);
+        data = d;
+        createSelect(data);
+        createTbl(data);
 
-        var td = document.createElement("td");
-        var b = document.createElement("button");
-        b.classList.add("btn");
-        b.classList.add("btn-sm");
+        
 
-        if (d.LOCAL_BR_INFO[index].BR_SIGNATURE == undefined || d.LOCAL_BR_INFO[index].BR_SIGNATURE == "") { } else {
-            b.setAttribute("disabled", "disabled");
+
+        //$('#tbl').DataTable();
+
+
+    });
+
+    function createSelect(d) {
+        var sign = [];
+        for (var index = 0; index < d.LOCAL_BR_INFO.length; index++) {
+            var element = d.LOCAL_BR_INFO[index];
+            if (sign.indexOf(d.LOCAL_BR_INFO[index].ObjectName) === -1) {
+                sign.push(d.LOCAL_BR_INFO[index].ObjectName);
+            }
+        }
+        for (let i = 0; i < sign.length; i++) {
+            var o = $("<option />").html(sign[i]).val(sign[i]);
+            $("#lstObjNavn").append(o);
+            
+        }
+    }
+
+    function createTbl(d) {
+        $("#tbl").empty();
+        for (var index = 0; index < d.LOCAL_BR_INFO.length; index++) {
+            var element = d.LOCAL_BR_INFO[index];
+
+            var tr = $("<tr />").attr("data-rgaid", d.LOCAL_BR_INFO[index].BR_ID);
+            var td = $("<td />").addClass("nw").html(d.LOCAL_BR_INFO[index].BR_OWNER);
+            tr.append(td);
+
+            var td = $("<td />").html(d.LOCAL_BR_INFO[index].BR_TEXT);
+            td.attr("title", "*****");
+            tr.append(td);
+
+            var td = $("<td />").addClass("nw").html(d.LOCAL_BR_INFO[index].BR_SIGNATURE);
+            tr.append(td);
+
+            var td = $("<td />");
+            var b = $("<button />").addClass("btn btn-sm").html("Godkend").attr("data-rgaid", d.LOCAL_BR_INFO[index].BR_ID);
+
+
+            if (d.LOCAL_BR_INFO[index].BR_SIGNATURE == undefined || d.LOCAL_BR_INFO[index].BR_SIGNATURE == "") { } else {
+                b.attr("disabled", "disabled");
+            }
+
+            td.append(b);
+            tr.append(td);
+
+            var td = $("<td />").html(d.LOCAL_BR_INFO[index].ObjectName);
+            td.hide();
+            tr.append(td);
+
+            b.click(function () {
+                var id = $(this).attr("data-rgaid");
+                console.log(id);
+                $(this).attr("disabled", "disabled");
+            });
+
+            $("#tbl").append(tr);
+
+
         }
 
-        var a = document.createAttribute("data-rgaid");
-        a.value = d.LOCAL_BR_INFO[index].BR_ID;
-        b.setAttributeNode(a);
-
-        b.onclick = function () {
-            var id = this.getAttribute("data-rgaid");
-            this.setAttribute("disabled", "disabled");
-        };
-
-        b.innerHTML = "Godkend";
-        td.appendChild(b);
-        tr.appendChild(td);
-
-        document.getElementById("tb").appendChild(tr);
-
     }
+
 })();
